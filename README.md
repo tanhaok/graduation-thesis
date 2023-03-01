@@ -10,6 +10,9 @@
 - [GODIVA MODEL](https://www.unite.ai/godiva-microsoft-research-asia-text-to-video-generation-image-synthesis/)
 - https://www.leadingindia.ai/downloads/projects/VP/vp_16.pdf
 
+## Refer repo
+- https://github.com/THUDM/CogVideo
+
 ## Sample Architect
 ![image](https://cdn-cednl.nitrocdn.com/ZIEpBLjPiSWpOcIdsSTlIdzcQJzKTmWw/assets/images/optimized/rev-865fdcc/wp-content/uploads/2021/12/Architecture-of-Text-to-Video-Generation-System-1024x617.jpg)
 
