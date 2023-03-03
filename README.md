@@ -18,3 +18,7 @@
 
 ## Database 
 [Howto100M](https://www.di.ens.fr/willow/research/howto100m/)
+
+## Todo:
+- [ ] implement code
+- [ ] diffusion models
