@@ -22,3 +22,6 @@
 ## Todo:
 - [ ] implement code
 - [ ] diffusion models
+- [ ] https://imagen.research.google/video/paper.pdf
+- [ ] https://venturebeat.com/ai/google-ai-generator-takes-on-meta-as-text-to-video-trend-ramps-up/
+- [ ] https://towardsdatascience.com/generative-ai-878909fb7868
