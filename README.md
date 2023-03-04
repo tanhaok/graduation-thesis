@@ -27,7 +27,9 @@ pinned: false
 - https://imagen.research.google/video/paper.pdf
 - https://venturebeat.com/ai/google-ai-generator-takes-on-meta-as-text-to-video-trend-ramps-up/
 - https://towardsdatascience.com/generative-ai-878909fb7868
-
+- https://pub-bede3007802c4858abc6f742f405d4ef.r2.dev/paper.pdf
+- https://arxiv.org/pdf/2104.14806.pdf
+- https://towardsdatascience.com/transfer-learning-from-pre-trained-models-f2393f124751
 ## Sample Architect
 ![image](https://cdn-cednl.nitrocdn.com/ZIEpBLjPiSWpOcIdsSTlIdzcQJzKTmWw/assets/images/optimized/rev-865fdcc/wp-content/uploads/2021/12/Architecture-of-Text-to-Video-Generation-System-1024x617.jpg)
 
