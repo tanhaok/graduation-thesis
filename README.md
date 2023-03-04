@@ -1,3 +1,13 @@
+---
+title: Text To Video    
+emoji: 🔥
+colorFrom: gray
+colorTo: purple
+sdk: streamlit
+sdk_version: 1.17.0 # The latest supported version
+app_file: app.py
+pinned: false
+---
 # graduation-thesis
 
 ## Information
