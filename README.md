@@ -12,8 +12,17 @@ pinned: false
 
 ## Information
 ### Title: `Generate Video From Textual Description`
-### Algorithm: `CRAFT`
 ### Language: `Python`
+
+##
+- Make a video: 
+  - https://github.com/lucidrains/make-a-video-pytorch
+- penaki:
+  - https://github.com/LAION-AI/phenaki
+  - https://github.com/lucidrains/phenaki-pytorch
+- other: 
+  - https://github.com/Youncy-Hu/MAGE
+  - https://github.com/breadbread1984/GODIVA
 
 ## Refer Document
 - https://www.datatobiz.com/blog/smart-video-generation-from-text/
