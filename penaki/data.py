@@ -109,7 +109,8 @@ def video_tensor_to_gif(tensor, path, duration = 120, loop = 0, optimize = True)
     """
     images = map(T.ToPILImage(), tensor.unbind(dim = 1))
     first_img, *rest_imgs = images
-    first_img.save(path, save_all = True, append_images = rest_imgs, duration = duration, loop = loop, optimize = optimize)
+    first_img.save(path, save_all = True, append_images = rest_imgs,
+                duration = duration, loop = loop, optimize = optimize)
     return images
 
 # gif -> (channels, frame, height, width) tensor
@@ -121,13 +122,14 @@ def gif_to_tensor(
     img = Image.open(path)
     tensors = tuple(map(transform, seek_all_images(img, channels = channels)))
     return torch.stack(tensors, dim = 1)
- 
-def video_to_tensor(path: str, num_frames = -1, crop_size = None):         
+
+def video_to_tensor(path: str, num_frames = -1, crop_size = None):
     """Handle reading and writing mp4
 
     Args:
         path (str): Path of the video to be imported
-        num_frames (int, optional): Number of frames to be stored in the output tensor. Defaults to -1.
+        num_frames (int, optional): Number of frames to be stored in the output tensor. 
+                                    Defaults to -1.
         crop_size (_type_, optional): (width, height): Size of frame want to crop. Defaults to None.
 
     Returns:
@@ -150,7 +152,8 @@ def video_to_tensor(path: str, num_frames = -1, crop_size = None):
 
         frames.append(rearrange(frame, '... -> 1 ...'))
 
-    frames = np.array(np.concatenate(frames[:-1], axis = 0))  # convert list of frames to numpy array
+    # convert list of frames to numpy array
+    frames = np.array(np.concatenate(frames[:-1], axis = 0))
     frames = rearrange(frames, 'f h w c -> c f h w')
 
     frames_torch = torch.tensor(frames).float()
@@ -172,7 +175,7 @@ def tensor_to_video(tensor, path: str, fps = 25, video_format = 'MP4V'):
     num_frames, height, width = tensor.shape[-3:]
 
     # Changes in this line can allow for different video formats.
-    fourcc = cv2.VideoWriter_fourcc(*video_format) 
+    fourcc = cv2.VideoWriter_fourcc(*video_format)
     video = cv2.VideoWriter(path, fourcc, fps, (width, height))
 
     frames = []
@@ -232,10 +235,12 @@ class VideoDataset(Dataset):
 
         # functions to transform video path to tensor
 
-        self.gif_to_tensor = partial(gif_to_tensor, channels = self.channels, transform = self.transform)
+        self.gif_to_tensor = partial(gif_to_tensor, channels = self.channels, 
+                                     transform = self.transform)
         self.mp4_to_tensor = partial(video_to_tensor, crop_size = self.image_size)
 
-        self.cast_num_frames_fn = partial(cast_num_frames, frames = num_frames) if force_num_frames else identity
+        self.cast_num_frames_fn = partial(cast_num_frames, 
+                                          frames = num_frames) if force_num_frames else identity
 
     def __len__(self):
         return len(self.paths)
