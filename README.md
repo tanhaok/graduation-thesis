@@ -15,15 +15,12 @@ pinned: false
 ### Language: `Python`
 
 ##
-- Make a video: 
-  - https://github.com/lucidrains/make-a-video-pytorch
 - penaki:
   - https://github.com/LAION-AI/phenaki
   - https://github.com/lucidrains/phenaki-pytorch
-- other: 
-  - https://github.com/Youncy-Hu/MAGE
-  - https://github.com/breadbread1984/GODIVA
-
+- Video explain:
+  - https://www.youtube.com/watch?v=Uf_xSjL0Bh8
+  - https://www.youtube.com/watch?v=RYLomvaPWa4
 ## Refer Document
 - https://www.datatobiz.com/blog/smart-video-generation-from-text/
 - [GODIVA MODEL](https://www.unite.ai/godiva-microsoft-research-asia-text-to-video-generation-image-synthesis/)
