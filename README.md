@@ -12,9 +12,15 @@ pinned: false
 
 ## Information
 ### Title: `Generate Video From Textual Description`
-### Algorithm: `CRAFT`
 ### Language: `Python`
 
+##
+- penaki:
+  - https://github.com/LAION-AI/phenaki
+  - https://github.com/lucidrains/phenaki-pytorch
+- Video explain:
+  - https://www.youtube.com/watch?v=Uf_xSjL0Bh8
+  - https://www.youtube.com/watch?v=RYLomvaPWa4
 ## Refer Document
 - https://www.datatobiz.com/blog/smart-video-generation-from-text/
 - [GODIVA MODEL](https://www.unite.ai/godiva-microsoft-research-asia-text-to-video-generation-image-synthesis/)
