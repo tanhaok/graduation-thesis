@@ -1,3 +1,4 @@
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=tanhaok_graduation-thesis)
 ---
 title: Text To Video    
 emoji: 🔥
