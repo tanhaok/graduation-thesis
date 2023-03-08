@@ -1,5 +1,3 @@
-[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=tanhaok_graduation-thesis)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tanhaok_graduation-thesis&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=tanhaok_graduation-thesis)
 ---
 title: Text To Video    
 emoji: 🔥
@@ -10,7 +8,7 @@ sdk_version: 1.17.0 # The latest supported version
 app_file: app.py
 pinned: false
 ---
-# graduation-thesis
+# graduation-thesis [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tanhaok_graduation-thesis&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=tanhaok_graduation-thesis)
 
 ## Information
 ### Title: `Generate Video From Textual Description`
