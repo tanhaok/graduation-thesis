@@ -54,7 +54,7 @@ def get_encoded_dim(name):
 
     if name not in T5_CONFIGS:
         config = T5Config.from_pretrained(name)
-        T5_CONFIGS[name] = {config:config}
+        T5_CONFIGS[name] = {config: config}
     elif "config" in T5_CONFIGS[name]:
         config = T5_CONFIGS[name]['config']
     elif 'model' in T5_CONFIGS[name]:

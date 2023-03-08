@@ -15,7 +15,6 @@ from torchvision import transforms as T
 from einops import rearrange
 
 
-
 def exists(val):
     """_summary_
 
@@ -99,6 +98,7 @@ class ImageDataset(Dataset):
     Args:
         Dataset (_type_): _description_
     """
+
     def __init__(self, folder, image_size, exts=['jpg', 'jpeg', 'png']):
         super().__init__()
         self.folder = folder
@@ -287,6 +287,7 @@ class VideoDataset(Dataset):
     Args:
         Dataset (_type_): _description_
     """
+
     def __init__(self,
                  folder,
                  image_size,
@@ -340,9 +341,6 @@ class VideoDataset(Dataset):
         return self.cast_num_frames_fn(tensor)
 
 
-# override dataloader to be able to collate strings
-
-
 def collate_tensors_and_strings(data):
     """_summary_
 
@@ -375,8 +373,7 @@ def collate_tensors_and_strings(data):
 
 
 def DataLoader(*args, **kwargs):
-    """_summary_
-
+    """ Override dataloader to be able to collate strings
     Returns:
         _type_: _description_
     """
