@@ -67,6 +67,7 @@ tzdata==2022.7
 tzlocal==4.2
 urllib3==1.26.14
 validators==0.20.0
+vector-quantize-pytorch==1.1.1
 watchdog==2.3.1
 wrapt==1.15.0
 yapf==0.32.0

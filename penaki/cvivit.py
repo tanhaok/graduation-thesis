@@ -15,8 +15,9 @@ from einops.layers.torch import Rearrange
 
 from vector_quantize_pytorch import VectorQuantize
 
-from phenaki_pytorch.attention import Attention, Transformer, ContinuousPositionBias
+from penaki.attention import Attention, Transformer, ContinuousPositionBias
 
+from accelerate import DistributedType
 # helpers
 
 
