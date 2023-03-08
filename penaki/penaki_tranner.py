@@ -28,12 +28,12 @@ from einops.layers.torch import Rearrange
 from PIL import Image
 from tqdm.auto import tqdm
 
-from phenaki_pytorch.optimizer import get_optimizer
-from accelerate import Accelerator
+from penaki.optimizer import get_optimizer
+from accelerate import Accelerator, DistributedType
 
-from phenaki_pytorch.phenaki_pytorch import Phenaki
+from penaki.penaki import Phenaki
 
-from phenaki_pytorch.data import ImageDataset, VideoDataset, video_tensor_to_gif, DataLoader
+from penaki.data import ImageDataset, VideoDataset, video_tensor_to_gif, DataLoader
 
 # constants
 
