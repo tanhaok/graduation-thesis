@@ -5,7 +5,7 @@ from functools import wraps
 
 import torch
 import torch.nn.functional as F
-from torch import nn, einsum
+from torch import log, nn, einsum
 from torch.autograd import grad as torch_grad
 
 import torchvision
@@ -413,7 +413,8 @@ class CViViT(nn.Module):
         ) == 0, f'number of tokens must be divisible by number of tokens per frame {tokens_per_frame}'
         assert (num_tokens > 0)
 
-        pseudo_frames = num_tokens // tokens_per_frames
+        # tokens_per_frames
+        pseudo_frames = num_tokens 
         return (pseudo_frames - 1) * self.temporal_patch_size + 1
 
     def num_tokens_per_frames(self, num_frames, include_first_frame=True):

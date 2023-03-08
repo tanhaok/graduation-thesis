@@ -15,14 +15,14 @@ from torchvision.utils import make_grid, save_image
 
 from einops import rearrange
 
-from phenaki_pytorch.optimizer import get_optimizer
+from penaki.optimizer import get_optimizer
 
 from ema_pytorch import EMA
 
-from phenaki_pytorch.cvivit import CViViT
-from phenaki_pytorch.data import ImageDataset, VideoDataset, video_tensor_to_gif
+from penaki.cvivit import CViViT
+from penaki.data import ImageDataset, VideoDataset, video_tensor_to_gif
 
-from accelerate import Accelerator
+from accelerate import Accelerator, DistributedType
 
 # helpers
 
