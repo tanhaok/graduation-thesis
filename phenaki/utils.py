@@ -20,7 +20,8 @@ def sample_maskgit(model, text_embeddings, steps=20, cond_scale=3., starting_tem
     video_token_ids = torch.full(shape, model.mask_id, device=device)
     mask = torch.ones(shape, device=device, dtype=torch.bool)
     timesteps = torch.linspace(0, 1, steps+1)[:-1]
-
+    # TODO: be careful when check this case
+    scores = torch.any()
     for step in range(steps):
         is_first_step = step == 0
         is_last_step = step == (steps - 1)
