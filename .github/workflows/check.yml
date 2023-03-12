@@ -52,18 +52,18 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-  sync-to-hub:
-    needs: ["sonar-cloud", "build"]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out
-        if: ${{ github.ref == 'refs/heads/main' }}
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          lfs: true
-      - name: Sync to hugging face
-        if: ${{ github.ref == 'refs/heads/main' }}
-        env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://haokey:$HF_TOKEN@huggingface.co/spaces/haokey/text-to-video main
+  # sync-to-hub:
+  #   needs: ["sonar-cloud", "build"]
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Check out
+  #       if: ${{ github.ref == 'refs/heads/main' }}
+  #       uses: actions/checkout@v3
+  #       with:
+  #         fetch-depth: 0
+  #         lfs: true
+  #     - name: Sync to hugging face
+  #       if: ${{ github.ref == 'refs/heads/main' }}
+  #       env:
+  #         HF_TOKEN: ${{ secrets.HF_TOKEN }}
+  #       run: git push https://haokey:$HF_TOKEN@huggingface.co/spaces/haokey/text-to-video main

@@ -1,4 +1,0 @@
-[TYPECHECK]
-generated-members=numpy.*, torch.*, cv2.*
-max-args=10
-max-attributes=10
