@@ -29,7 +29,7 @@ from PIL import Image
 from tqdm.auto import tqdm
 
 from phenaki.optimizer import get_optimizer
-from accelerate import Accelerator
+from accelerate import Accelerator, DistributedType
 
 from phenaki.phenaki import Phenaki
 
@@ -391,7 +391,7 @@ class PhenakiTrainer(object):
 
             # whether to pass in texts or not
 
-            sample_kwargs = dict()
+            # sample_kwargs = dict()
 
             if not self.unconditional:
                 texts = choices(self.sample_texts, k = self.num_samples)
