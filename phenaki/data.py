@@ -191,7 +191,6 @@ def crop_center(
     starty = y // 2 - cropy // 2
     return img[starty:(starty + cropy), startx:(startx + cropx), :]
 
-# video dataset
 
 class VideoDataset(Dataset):
     def __init__(

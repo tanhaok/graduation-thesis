@@ -88,10 +88,10 @@ def hinge_gen_loss(fake):
     return -fake.mean()
 
 def bce_discr_loss(fake, real):
-    return (-log(1 - torch.sigmoid(fake)) - log(torch.sigmoid(real))).mean()
+    return (-math.log(1 - torch.sigmoid(fake)) - math.log(torch.sigmoid(real))).mean()
 
 def bce_gen_loss(fake):
-    return -log(torch.sigmoid(fake)).mean()
+    return -math.log(torch.sigmoid(fake)).mean()
 
 def grad_layer_wrt_loss(loss, layer):
     return torch_grad(
@@ -369,7 +369,7 @@ class CViViT(nn.Module):
         assert (num_tokens % tokens_per_frame) == 0, f'number of tokens must be divisible by number of tokens per frame {tokens_per_frame}'
         assert (num_tokens > 0)
 
-        pseudo_frames = num_tokens // tokens_per_frames
+        pseudo_frames = num_tokens // tokens_per_frame
         return (pseudo_frames - 1) * self.temporal_patch_size + 1
 
     def num_tokens_per_frames(self, num_frames, include_first_frame = True):
@@ -610,7 +610,8 @@ class CViViT(nn.Module):
         # handle grayscale for vgg
 
         if video.shape[1] == 1:
-            input_vgg_input, recon_vgg_input = map(lambda t: repeat(t, 'b 1 ... -> b c ...', c = 3), (img_vgg_input, fmap_vgg_input))
+            # check here when loss not make sense 
+            input_vgg_input, recon_vgg_input = map(lambda t: repeat(t, 'b 1 ... -> b c ...', c = 3), (input_vgg_input, recon_vgg_input))
 
         input_vgg_feats = self.vgg(input_vgg_input)
         recon_vgg_feats = self.vgg(recon_vgg_input)
