@@ -23,6 +23,7 @@ from phenaki.cvivit import CViViT
 from phenaki.data import ImageDataset, VideoDataset, video_tensor_to_gif
 
 from accelerate import Accelerator, DistributedType
+import logging
 
 # helpers
 
@@ -42,7 +43,8 @@ def cast_tuple(t):
 
 def yes_or_no(question):
     answer = input(f'{question} (y/n) ')
-    return answer.lower() in ('yes', 'y')
+    # return answer.lower() in ('yes', 'y')
+    return True
 
 def accum_log(log, new_logs):
     for key, new_value in new_logs.items():
@@ -197,7 +199,8 @@ class CViViTTrainer(nn.Module):
         self.discr_optim.load_state_dict(pkg['discr_optim'])
 
     def print(self, msg):
-        self.accelerator.print(msg)
+        # self.accelerator.print(msg)
+        logging.info(msg)
 
     @property
     def device(self):

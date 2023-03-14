@@ -35,6 +35,7 @@ from phenaki.phenaki import Phenaki
 
 from phenaki.data import ImageDataset, VideoDataset, video_tensor_to_gif, DataLoader
 
+import logging
 # constants
 
 DATASET_FIELD_TYPE_CONFIG = dict(
@@ -300,7 +301,8 @@ class PhenakiTrainer(object):
         return dict(zip(self.dataset_fields, data))
 
     def print(self, msg):
-        self.accelerator.print(msg)
+        # self.accelerator.print(msg)
+        logging.info(msg)
 
     @property
     def device(self):
