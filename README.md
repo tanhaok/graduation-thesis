@@ -26,6 +26,11 @@ pinned: false
 - [GODIVA MODEL](https://www.unite.ai/godiva-microsoft-research-asia-text-to-video-generation-image-synthesis/)
 - https://www.leadingindia.ai/downloads/projects/VP/vp_16.pdf
 
+## Keywords
+- `vqgan-vae autoencoder`
+- `CVIVIT`
+- `Transformer`
+- `MaskGit`
 ## Refer repo
 - https://github.com/THUDM/CogVideo
 - https://arxiv.org/pdf/2212.11565.pdf
@@ -36,6 +41,7 @@ pinned: false
 - https://pub-bede3007802c4858abc6f742f405d4ef.r2.dev/paper.pdf
 - https://arxiv.org/pdf/2104.14806.pdf
 - https://towardsdatascience.com/transfer-learning-from-pre-trained-models-f2393f124751
+- https://www.linkedin.com/pulse/text-video-phenaki-yash-sharma/
 ## Sample Architect
 ![image](https://cdn-cednl.nitrocdn.com/ZIEpBLjPiSWpOcIdsSTlIdzcQJzKTmWw/assets/images/optimized/rev-865fdcc/wp-content/uploads/2021/12/Architecture-of-Text-to-Video-Generation-System-1024x617.jpg)
 
